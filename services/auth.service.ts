@@ -18,7 +18,7 @@ export const loginUser = async (data: { email: string; password: string }) => {
  */
 export const register = async (data: any) => {
   try {
-    const res = await API.post("/auth/register", data);
+    const res = await API.post("/auth/signup", data);
     return res.data;
   } catch (error: any) {
     const message = error?.response?.data?.message || "Registration failed";
