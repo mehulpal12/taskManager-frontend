@@ -200,7 +200,7 @@ export default function Dashboard() {
                         {isSidebarOpen && (
                             <div className="flex items-center gap-2">
                                 <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-                                    <span className="text-white font-black">A</span>
+                                    <span className="text-white font-black">M</span>
                                 </div>
                                 <span className="font-black text-xl tracking-tighter">Task Manager</span>
                             </div>
@@ -255,7 +255,7 @@ export default function Dashboard() {
 
                 {/* MAIN CONTENT */}
                 <main className="flex-1 flex flex-col overflow-hidden">
-                    <header className="h-20 flex-shrink-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8">
+                    <header className="h-20 shrink-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8">
                         <div className="min-w-0">
                             <h1 className="text-xl md:text-2xl font-black tracking-tight truncate flex items-center gap-2">
                                 {projects.find(p => p._id === selectedProject)?.name || "Select Project"}
@@ -263,14 +263,7 @@ export default function Dashboard() {
                             </h1>
                         </div>
 
-                        <div className="flex items-center gap-4 flex-shrink-0">
-                            <div className="hidden sm:flex items-center -space-x-2">
-                                {members.slice(0, 3).map((m, i) => (
-                                    <div key={i} className="w-8 h-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px] font-bold">
-                                        {m.user.email.charAt(0).toUpperCase()}
-                                    </div>
-                                ))}
-                            </div>
+                        <div className="flex items-center gap-4 shrink-0">
                             <button onClick={logout} className="p-2 text-slate-400 hover:text-red-500 transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
                             </button>
